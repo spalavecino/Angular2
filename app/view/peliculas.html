@@ -1,0 +1,10 @@
+<h1>{{titulo}}</h1>
+<button (click)="mostrarOcultar(true)" [class.ocultar]="mostrarPeliculas">Mostrar</button>
+<button (click)="mostrarOcultar(false)" [class.ocultar]="!mostrarPeliculas">Ocultar</button>
+<div *ngIf="mostrarPeliculas">
+    <ul *ngFor="#peli of peliculas">
+        <li>Pelicula: {{peli.titulo}}</li>
+        <li>Director: {{peli.director}}</li>
+        <li>Año: {{peli.anio}}</li>
+    </ul>
+</div>
